@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ip-logger
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PORT
+        value: 10000  # Render otomatik bir port atar ama bu örnek için sabit yazılmış. Genelde gerek yoktur.
